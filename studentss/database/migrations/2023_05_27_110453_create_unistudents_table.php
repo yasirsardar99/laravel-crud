@@ -19,6 +19,7 @@ class CreateUnistudentsTable extends Migration
             $table->string('section');
             $table->string('course');
             $table->string('email');
+            $table->string('category');
             $table->timestamps();
         });
     }

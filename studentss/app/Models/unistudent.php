@@ -12,6 +12,17 @@ class unistudent extends Model
         'name',
         'section',
         'course',
-        'email'
+        'email',
+        'category'
     ];
+
+    public function setCategoryAttribute($value)
+    {
+        $this->attributes['category'] = json_encode($value);
+    }
+
+    public function getCategoryAttribute($value)
+    {
+        return $this->attributes['category'] = json_decode($value);
+    }
 }

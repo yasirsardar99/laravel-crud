@@ -41,7 +41,11 @@ class UnistudentController extends Controller
          'section'=>$request->section,
          'course'=>$request->course,
          'email'=>$request->email,
+        'category'=>$request->category
+
        ];
+
+
 
        unistudent::create($data);
         return redirect('unistudent')->with('status', 'student data added successfully');
